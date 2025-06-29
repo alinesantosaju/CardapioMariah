@@ -74,9 +74,8 @@
     }
   </style>
 </head>
+  
 <body>
-  <audio id="pageSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_16078d4b40.mp3?filename=page-flip-2-45799.mp3"></audio>
-
   
     <div class="image-container" id="imageContainer">
       <img src="Maria_page_1.jpeg" class="active" alt="1">
@@ -94,7 +93,7 @@
 
   <script>
     const images = document.querySelectorAll('.image-container img');
-    const pageSound = document.getElementById('pageSound');
+    
     let current = 0;
 
     function showImage(index) {
@@ -105,21 +104,14 @@
 
     function nextImage() {
       current = (current + 1) % images.length;
-      playSound();
       showImage(current);
     }
 
     function prevImage() {
       current = (current - 1 + images.length) % images.length;
-      playSound();
       showImage(current);
     }
-
-    function playSound() {
-      pageSound.currentTime = 0;
-      pageSound.play();
-    }
-
+   
 
   </script>
 </body>
