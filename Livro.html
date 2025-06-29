@@ -77,8 +77,7 @@
 <body>
   <audio id="pageSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_16078d4b40.mp3?filename=page-flip-2-45799.mp3"></audio>
 
-
-    
+<div class="book">    
     <div class="image-container" id="imageContainer">
       <img src="Maria_page_1.jpeg" class="active" alt="1">
       <img src="Maria_page_2.jpeg" alt="2">
@@ -89,7 +88,7 @@
       <button onclick="prevImage()">&#8592; Anterior</button>
       <button onclick="nextImage()">Próxima &#8594;</button>
     </div>
-    
+</div>
   
 
   <script>
@@ -120,6 +119,8 @@
       pageSound.play();
     }
 
+
+<!-- INÍCIO COMENT
     // Suporte a toque para celular
     let touchStartX = 0;
     let touchEndX = 0;
@@ -136,7 +137,9 @@
     function handleGesture() {
       if (touchEndX < touchStartX - 50) nextImage();
       if (touchEndX > touchStartX + 50) prevImage();
-    }
+    } 
+-->
+
   </script>
 </body>
 </html>
