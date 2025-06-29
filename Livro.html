@@ -121,26 +121,6 @@
     }
 
 
-<!-- INÍCIO COMENT
-    // Suporte a toque para celular
-    let touchStartX = 0;
-    let touchEndX = 0;
-
-    document.getElementById('imageContainer').addEventListener('touchstart', (e) => {
-      touchStartX = e.changedTouches[0].screenX;
-    });
-
-    document.getElementById('imageContainer').addEventListener('touchend', (e) => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleGesture();
-    });
-
-    function handleGesture() {
-      if (touchEndX < touchStartX - 50) nextImage();
-      if (touchEndX > touchStartX + 50) prevImage();
-    } 
--->
-
   </script>
 </body>
 </html>
