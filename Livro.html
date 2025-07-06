@@ -97,6 +97,7 @@
     let current = 0;
 
     function showImage(index) {
+      ativarTelaCheia();
       images.forEach((img, i) => {
         img.classList.toggle('active', i === index);
       });
@@ -111,7 +112,40 @@
       current = (current - 1 + images.length) % images.length;
       showImage(current);
     }
-   
+
+    //Testar tela cheia
+    function ativarTelaCheia() {
+      const elemento = document.documentElement; // Elemento raiz do documento    
+      if (elemento.requestFullscreen) {
+        elemento.requestFullscreen();
+      } else if (elemento.mozRequestFullScreen) { /* Firefox */
+        elemento.mozRequestFullScreen();
+      } else if (elemento.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        elemento.webkitRequestFullscreen();
+      } else if (elemento.msRequestFullscreen) { /* IE/Edge */
+        elemento.msRequestFullscreen();
+      }
+    }
+    
+    function sairTelaCheia() {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      } else if (document.mozCancelFullScreen) { /* Firefox */
+        document.mozCancelFullScreen();
+      } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+        document.webkitExitFullscreen();
+      } else if (document.msExitFullscreen) { /* IE/Edge */
+        document.msExitFullscreen();
+      }
+    }
+    
+    // Exemplo de uso:
+    // Para ativar a tela cheia quando um botão for clicado:
+    // document.getElementById("meuBotao").addEventListener("click", ativarTelaCheia);
+    
+    // Para sair da tela cheia, você pode chamar a função sairTelaCheia() em resposta a um evento, como um botão ou um temporizador.
+      
+    
 
   </script>
 </body>
